@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time & calculator</title>
+</head>
+<style>
+    div#show_time {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    color: darkgreen;
+}
+.btn_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn_item{
+    flex: 1;
+}
+.calculator {
+    width: 250px;
+    margin: auto;
+    padding: 20px;
+}
+.btn_item, .cler {
+    flex: 1;
+    font-size: 25px;
+    color: cornsilk;
+    background: linear-gradient(45deg, #06a58f, #f724c0);
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #b1b1b159;
+    transition: .4s;
+}
+.inpt_field {
+    text-align: center;
+    /* padding: 10px; */
+}
+input[type="text"] {
+    width: 88%;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid #647669bf;
+    color: darkmagenta;
+}
+.cal_items {
+    box-shadow: 0 2px 12px 1px #999;
+    padding: 20px;
+    background: linear-gradient(177deg, #14f9cf26, #e93c7c63);
+    border-radius: 5px;
+    border: 1px solid lawngreen;
+}
+button.btn_item:hover {
+    background: linear-gradient(45deg, #8dfdf8, #fb0af4bf);
+}
+</style>
+<body>
+    <h1 style="text-align: center;">The time is ......</h1>
+    <div id='show_time' class="show_time"></div>
+    <div class="calculator">
+        <h4 style="text-align: center;">Real calculator with javaScript ......</h4>
+        <div class="cal_items">
+            <div class="inpt_field"><input class="display" type="text"disabled></div>
+            <div class="btn_list">
+                <button class="btn_item" value="7">7</button>
+                <button class="btn_item" value="8">8</button>
+                <button class="btn_item" value="9">9</button>
+                <button class="cler btn_item">C</button>
+            </div>
+            <div class="btn_list">
+                <button class="btn_item" value="4">4</button>
+                <button class="btn_item" value="5">5</button>
+                <button class="btn_item" value="6">6</button>
+                <button class="btn_item" value="-">-</button>
+            </div>            
+            <div class="btn_list">
+                <button class="btn_item" value="1">1</button>
+                <button class="btn_item" value="2">2</button>
+                <button class="btn_item" value="3">3</button>
+                <button class="btn_item" value="+">+</button>
+            </div>            
+            <div class="btn_list">
+                <button class="btn_item" value="/">/</button>
+                <button class="btn_item" value="0">0</button>
+                <button class="btn_item" value="*">x</button>
+                <button onclick="result()" class="btn_item">=</button>
+            </div>
+        </div>  <!-- cal_items -->
+    </div><!--calculator-->
+    <script src="calculator_time.js"></script>
+</body>
+</html>
